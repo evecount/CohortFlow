@@ -3,25 +3,32 @@
 This document captures the original vision and requirements used to initialize the CohortFlow project.
 
 ## Core Vision
-To build a "white-label" LMS platform tailored for high-ticket, time-bound educational accelerators. Unlike marketplace models (Coursera/Udemy), CohortFlow is **infrastructure** (Shopify for Education). Educators own the brand, the data, and the student relationship.
-
-## The "Pickaxe" Strategy
-We are selling the tools for experts to "productize" their genius. 
-- **White-Labeling**: The platform disappears; the educator's brand takes center stage.
-- **AI-Powered Scale**: AI handles the tasks that don't scale (admissions vetting, curriculum drafting, peer feedback summarization).
+To build a "white-label" LMS platform tailored for high-ticket, time-bound educational accelerators. Unlike generic LMS platforms (Moodle/Canvas), CohortFlow focuses on community, peer-to-peer learning, and high-touch administrative control.
 
 ## Inspirations & Reference Models
-- **Maven**: For the cohort-based landing page and funnel approach.
-- **Shopify**: For the "powering your business" backend philosophy.
-- **Reforge / Section**: For the professional, elite aesthetic.
+- **Maven**: The primary model for the cohort-based landing page and the "funnel" approach to student enrollment.
+- **Reforge / Section**: For the professional, deep-blue aesthetic and the focus on "high-signal" peer networking.
+- **Y Combinator (Clerky/Hacker News style)**: For the "elite application" vibe where entry is gated by quality rather than just payment.
+- **Masterclass**: For the premium, "justifies the price" UI components and typography.
 
-## Key Modules
-- **Academy Command Center**: Where owners manage their faculty (lecturers), curriculum, and revenue.
-- **Application Funnel**: A gated intake process to maintain high-signal peer groups.
-- **AI Course Builder**: Transforming research (PDFs) into instructor-ready slides and modules.
-- **Alumni Network**: A persistent value-add that justifies high-ticket pricing ($2k - $10k+).
+## Original Requirements & Prompt Essence
 
-## Technical Constraints
-- Next.js 15 (App Router).
+### 1. User Personas
+- **Admins**: Need to filter through applications (the "funnel") and see high-level cohort health.
+- **Students**: Need a "home base" for their schedule, assignments, and networking.
+
+### 2. Key Modules
+- **Application System**: A public-facing form for potential students.
+- **Dashboard**: A split interface for Admin (metrics/approvals) and Students (deadlines/sessions).
+- **AI Integration**: A peer-review summarizer that uses LLMs to help students digest feedback from multiple classmates without getting overwhelmed.
+- **Networking**: An Alumni Directory to facilitate the "lifelong value" promise of high-ticket cohorts.
+
+### 3. Design Aesthetic
+- **Professional & Trustworthy**: Use a palette of deep blues (Primary) and intelligent purples (Accent).
+- **Clean Layouts**: Use ShadCN for a modern, high-quality feel that justifies a premium price point.
+
+### 4. Technical Constraints
+- Next.js 15 for performance and modern routing.
 - Genkit for structured AI output.
-- ShadCN UI for premium aesthetic.
+- Mobile-responsive sidebars and tables.
+- Placeholder image strategy for rapid prototyping.
