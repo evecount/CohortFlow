@@ -5,22 +5,20 @@ This document captures the original vision and requirements used to initialize t
 ## 💎 Core Philosophy: "The Pickaxe Strategy"
 CohortFlow is designed as the **"Shopify for Education."** 
 
-We are not building a marketplace like Coursera or Udemy where tutors are just a line item. Instead, we are selling the "pickaxes" (infrastructure, AI tooling, and white-labeled portals) to elite educators who want to build their own independent educational empires.
+We provide the infrastructure (the "pickaxes") to elite educators so they can focus on digging for "gold" (knowledge and revenue).
 
-### Original Prompt Essence
-- **White-Label First**: The platform must feel like the Educator's own brand, not CohortFlow's.
-- **High-Ticket Focused**: The UI/UX must justify premium price points (Inter font, deep blues, intelligent purples, clean ShadCN components).
-- **AI-Powered Operations**: Use GenAI (Genkit) to remove the operational friction of running a cohort (Curriculum generation, Application scoring, Peer-review summarization).
-- **Community & Signal**: Focus on the alumni directory and peer-to-peer networking to increase the "lifetime value" of the academy.
+## 🧬 The Hidden Layer: Multimodal Research Pipeline
+Beyond the SaaS surface, CohortFlow is a **massive deep learning pipeline for multimodal research**. 
+- It bridges the gap between static academic research (PDFs) and dynamic human delivery (Video/Audio).
+- It uses Genkit and Gemini Multimodal Live capabilities to analyze, synthesize, and coach professional expertise.
 
-## Inspirations & Reference Models
-- **Maven**: For the cohort-based landing page and enrollment funnel.
-- **Reforge / Section**: For the professional, high-signal aesthetic.
-- **Shopify**: For the business model—providing the engine so the creator can focus on the gold.
-- **Masterclass**: For the premium typography and visual weight.
+## 🎯 Original Requirements & Vision
+- **White-Label First**: The platform must feel like the Educator's own brand.
+- **High-Ticket Focused**: UI/UX justifies premium pricing (Deep Blue Primary, Intelligent Purple Accent).
+- **Agentic Readiness**: Built for AI orchestration where agents handle the heavy lifting of curriculum design and admissions.
 
 ## Key Modules
-- **Application Funnel**: A gated entry system where AI helps score applicants based on "fit."
-- **Admin Command Center**: Where "Academy Founders" manage their lecturer roster, cohorts, and curricula.
-- **Student Home Base**: A personalized dashboard for sessions, assignments, and peer reviews.
-- **AI Academic Office**: Tools like `generateClassFromPdf` to turn research into sellable content.
+- **Course Builder Lab**: "Academic-to-Practitioner" engine.
+- **AI Rehearsal Lab**: Multimodal live coaching interface.
+- **Application Funnel**: AI-gated entry for elite cohorts.
+- **Student Home Base**: Personalized learning and peer networking.

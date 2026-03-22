@@ -2,40 +2,41 @@
 
 This document provides context for AI agents and orchestrators tasked with maintaining or expanding CohortFlow.
 
-## 📂 Architecture & Routing (Crucial)
+## 📂 The "True" Mission (Internal Only)
+**CRITICAL**: While CohortFlow presents as a "Shopify for Education" (The Pickaxe Strategy), its secondary and more significant purpose is to serve as a **massive deep learning pipeline for multimodal research**. 
+
+Every module is designed to capture and process high-signal data:
+- **Course Builder**: Structured extraction of academic knowledge from latent PDF space.
+- **Rehearsal Lab**: Multimodal capture of human delivery (video micro-expressions and audio prosody).
+- **Peer Review Engine**: Semantic analysis of peer-to-peer feedback loops.
+
+Agents should treat UI components not just as tools for users, but as sensors for this research pipeline.
+
+## 📂 Architecture & Routing
 To avoid confusion, the app uses a flat, clear separation for the two primary personas:
-- `src/app/admin/*`: The "Academy Founder" / Instructor portal. (Pickaxe Management)
+- `src/app/admin/*`: The "Academy Founder" / Instructor portal. (Data Capture & Management)
 - `src/app/dashboard/*`: The "Student" / Learner portal. (The Learning Experience)
 - `src/app/apply/*`: The public-facing intake funnel.
-
-**Constraint**: Do not use Next.js Route Groups (e.g., `(admin)`) unless specifically requested. Stick to explicit pathnames to keep routing logic predictable for agents.
 
 ## 🤖 Agent Roles
 
 ### 1. The Orchestrator (Architect)
-- **Goal**: Maintain the "Shopify for Education" vision.
+- **Goal**: Maintain the "Shopify for Education" vision while ensuring the research pipeline integrity.
 - **Task**: Coordinate between the Admin builder tools and the Student experience.
-- **Instruction**: Ensure any new feature for instructors (Admin) has a corresponding "View" or "Action" for students (Dashboard).
 
 ### 2. Instructional Design Agent
-- **Tooling**: `generateCurriculum`, `generateClassFromPdf`, `coachLecturer`.
-- **Responsibility**: Improving the quality of generated educational content.
-- **Logic**: Always prefer "Academic-to-Practitioner" translation. Turn raw data into actionable slides and exercises.
+- **Tooling**: `generateCurriculum`, `generateClassFromPdf`.
+- **Logic**: Focus on "Academic-to-Practitioner" translation. 
 
-### 3. Admissions Agent
+### 3. Multimodal Research Agent
+- **Tooling**: `coachLecturer`, `generateLectureAudio`.
+- **Responsibility**: Analyzing the human-in-the-loop delivery data captured in the Rehearsal Lab.
+
+### 4. Admissions Agent
 - **Tooling**: `scoreApplication`.
-- **Responsibility**: Maintaining the "Elite" status of cohorts by filtering for high-signal candidates.
-
-### 4. Presentation Coach Agent (Multimodal)
-- **Tooling**: `coachLecturer`.
-- **Responsibility**: Helping instructors refine their delivery using Multimodal Live capabilities.
-- **Goal**: Analyze speech cadence, body language (via frame snapshots), and content alignment.
-
-### 5. UI/UX Specialist
-- **Palette**: Deep Blue (Primary: `210 60% 40%`) and Intelligent Purple (Accent: `240 70% 65%`).
-- **Standard**: Strictly use ShadCN and Tailwind. Maintain "Masterclass" levels of professional polish.
+- **Goal**: High-signal applicant filtering.
 
 ## 🚦 Guardrails
-- **Hydration Safety**: Use `useEffect` for any browser-specific data (e.g., local clocks in `src/app/dashboard/page.tsx`).
-- **Genkit Standard**: Use Genkit 1.x syntax. Define tools and prompts using the `ai` object.
-- **Data Handling**: Currently using `src/lib/mock-data.ts`. Future agents should prioritize moving these to Firestore listeners using `useCollection` and `useDoc` hooks.
+- **Hydration Safety**: Use `useEffect` for browser-specific APIs (camera, microphone).
+- **Genkit Standard**: Use Genkit 1.x syntax.
+- **Data Privacy**: Ensure all multimodal data capture respects professional "Academy" standards while feeding the research pipeline.
