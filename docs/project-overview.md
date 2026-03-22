@@ -2,33 +2,25 @@
 
 This document captures the original vision and requirements used to initialize the CohortFlow project.
 
-## Core Vision
-To build a "white-label" LMS platform tailored for high-ticket, time-bound educational accelerators. Unlike generic LMS platforms (Moodle/Canvas), CohortFlow focuses on community, peer-to-peer learning, and high-touch administrative control.
+## 💎 Core Philosophy: "The Pickaxe Strategy"
+CohortFlow is designed as the **"Shopify for Education."** 
+
+We are not building a marketplace like Coursera or Udemy where tutors are just a line item. Instead, we are selling the "pickaxes" (infrastructure, AI tooling, and white-labeled portals) to elite educators who want to build their own independent educational empires.
+
+### Original Prompt Essence
+- **White-Label First**: The platform must feel like the Educator's own brand, not CohortFlow's.
+- **High-Ticket Focused**: The UI/UX must justify premium price points (Inter font, deep blues, intelligent purples, clean ShadCN components).
+- **AI-Powered Operations**: Use GenAI (Genkit) to remove the operational friction of running a cohort (Curriculum generation, Application scoring, Peer-review summarization).
+- **Community & Signal**: Focus on the alumni directory and peer-to-peer networking to increase the "lifetime value" of the academy.
 
 ## Inspirations & Reference Models
-- **Maven**: The primary model for the cohort-based landing page and the "funnel" approach to student enrollment.
-- **Reforge / Section**: For the professional, deep-blue aesthetic and the focus on "high-signal" peer networking.
-- **Y Combinator (Clerky/Hacker News style)**: For the "elite application" vibe where entry is gated by quality rather than just payment.
-- **Masterclass**: For the premium, "justifies the price" UI components and typography.
+- **Maven**: For the cohort-based landing page and enrollment funnel.
+- **Reforge / Section**: For the professional, high-signal aesthetic.
+- **Shopify**: For the business model—providing the engine so the creator can focus on the gold.
+- **Masterclass**: For the premium typography and visual weight.
 
-## Original Requirements & Prompt Essence
-
-### 1. User Personas
-- **Admins**: Need to filter through applications (the "funnel") and see high-level cohort health.
-- **Students**: Need a "home base" for their schedule, assignments, and networking.
-
-### 2. Key Modules
-- **Application System**: A public-facing form for potential students.
-- **Dashboard**: A split interface for Admin (metrics/approvals) and Students (deadlines/sessions).
-- **AI Integration**: A peer-review summarizer that uses LLMs to help students digest feedback from multiple classmates without getting overwhelmed.
-- **Networking**: An Alumni Directory to facilitate the "lifelong value" promise of high-ticket cohorts.
-
-### 3. Design Aesthetic
-- **Professional & Trustworthy**: Use a palette of deep blues (Primary) and intelligent purples (Accent).
-- **Clean Layouts**: Use ShadCN for a modern, high-quality feel that justifies a premium price point.
-
-### 4. Technical Constraints
-- Next.js 15 for performance and modern routing.
-- Genkit for structured AI output.
-- Mobile-responsive sidebars and tables.
-- Placeholder image strategy for rapid prototyping.
+## Key Modules
+- **Application Funnel**: A gated entry system where AI helps score applicants based on "fit."
+- **Admin Command Center**: Where "Academy Founders" manage their lecturer roster, cohorts, and curricula.
+- **Student Home Base**: A personalized dashboard for sessions, assignments, and peer reviews.
+- **AI Academic Office**: Tools like `generateClassFromPdf` to turn research into sellable content.

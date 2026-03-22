@@ -1,35 +1,36 @@
 # Agentic Flow Instructions & Orchestration Guide
 
-This document provides context and instructions for AI agents and orchestrators tasked with maintaining or expanding the CohortFlow project.
+This document provides context for AI agents and orchestrators tasked with maintaining or expanding CohortFlow.
+
+## 📂 Architecture & Routing (Crucial)
+To avoid confusion, the app uses a flat, clear separation for the two primary personas:
+- `src/app/admin/*`: The "Academy Founder" / Instructor portal. (Pickaxe Management)
+- `src/app/dashboard/*`: The "Student" / Learner portal. (The Learning Experience)
+- `src/app/apply/*`: The public-facing intake funnel.
+
+**Constraint**: Do not use Next.js Route Groups (e.g., `(admin)`) unless specifically requested. Stick to explicit pathnames to keep routing logic predictable for agents.
 
 ## 🤖 Agent Roles
 
 ### 1. The Orchestrator (Architect)
-- **Responsibility**: High-level task decomposition and multi-agent coordination.
-- **Goal**: Ensure that all features align with the "High-Ticket/Elite" brand aesthetic.
-- **Instruction**: Use the `generateCurriculum` tool to help users initialize new cohorts.
+- **Goal**: Maintain the "Shopify for Education" vision.
+- **Task**: Coordinate between the Admin builder tools and the Student experience.
+- **Instruction**: Ensure any new feature for instructors (Admin) has a corresponding "View" or "Action" for students (Dashboard).
 
-### 2. Admissions Specialist
-- **Responsibility**: Reviewing the application funnel and maintaining cohort quality.
-- **Tooling**: Use the `scoreApplication` flow to provide a baseline "Fit Score" for every incoming student.
-- **Goal**: Filter for high-signal candidates who justify the premium price point.
+### 2. Instructional Design Agent
+- **Tooling**: `generateCurriculum`, `generateClassFromPdf`.
+- **Responsibility**: Improving the quality of generated educational content.
+- **Logic**: Always prefer "Academic-to-Practitioner" translation. Turn raw data into actionable slides and exercises.
 
-### 3. Instructional Designer & Academic Transcriber
-- **Responsibility**: Expanding the curriculum and session descriptions.
-- **Tooling**: 
-  - Use `generateCurriculum` to suggest themes.
-  - Use `generateClassFromPdf` to ingest complex research papers (e.g., from arXiv) and synthesize them into practitioner-ready modules.
-- **Goal**: Reduce the friction for experts to "productize" their knowledge.
+### 3. Admissions Agent
+- **Tooling**: `scoreApplication`.
+- **Responsibility**: Maintaining the "Elite" status of cohorts by filtering for high-signal candidates.
 
-### 4. Frontend Specialist (ShadCN/Tailwind)
-- **Responsibility**: UI/UX implementation using Next.js 15 and Tailwind.
-- **Instruction**: Strictly use the ShadCN components in `@/components/ui`. Maintain the deep blue (`primary`) and intelligent purple (`accent`) color palette defined in `globals.css`.
-
-## 🛠 Project State: Hybrid Conceptual
-- **Current State**: Functional prototype with mock data and active GenAI tools.
-- **Next Logical Step**: Replace `src/lib/mock-data.ts` with real Firestore listeners and implement Firebase Authentication.
+### 4. UI/UX Specialist
+- **Palette**: Deep Blue (Primary: `210 60% 40%`) and Intelligent Purple (Accent: `240 70% 65%`).
+- **Standard**: Strictly use ShadCN and Tailwind. Maintain "Masterclass" levels of professional polish.
 
 ## 🚦 Guardrails
-- **No Direct Logic in Templates**: Keep Handlebars templates logic-less.
-- **Hydration Safety**: Use `useEffect` for browser-specific APIs (e.g., local time in the dashboard).
-- **Tool Usage**: Always prefer `ai.defineTool` for modular agentic capabilities.
+- **Hydration Safety**: Use `useEffect` for any browser-specific data (e.g., local clocks in `src/app/dashboard/page.tsx`).
+- **Genkit Standard**: Use Genkit 1.x syntax. Define tools and prompts using the `ai` object.
+- **Data Handling**: Currently using `src/lib/mock-data.ts`. Future agents should prioritize moving these to Firestore listeners using `useCollection` and `useDoc` hooks.
