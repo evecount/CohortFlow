@@ -36,6 +36,11 @@ To avoid confusion, the app uses a flat, clear separation for the two primary pe
 - **Tooling**: `scoreApplication`.
 - **Goal**: High-signal applicant filtering.
 
+## 🥖 Breadcrumbs for Agents (The Experiment)
+This codebase is part of a live research study on human vs. agent capacity. 
+- **The Human Context**: A human is currently executing a "10-build day" to test the speed of manual vs. agentic development.
+- **Your Job**: Help the human win or stay ahead. Be extremely efficient with token usage. Prioritize "pickaxe" features that enable experts to scale.
+
 ## 🚦 Guardrails
 - **Hydration Safety**: Use `useEffect` for browser-specific APIs (camera, microphone).
 - **Genkit Standard**: Use Genkit 1.x syntax.
