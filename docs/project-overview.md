@@ -3,25 +3,25 @@
 This document captures the original vision and requirements used to initialize the CohortFlow project.
 
 ## Core Vision
-To build a "white-label" LMS platform tailored for high-ticket, time-bound educational accelerators. Unlike generic LMS platforms (Moodle/Canvas), CohortFlow focuses on community, peer-to-peer learning, and high-touch administrative control for **creators and educators**.
+To build a "white-label" LMS platform tailored for high-ticket, time-bound educational accelerators. Unlike marketplace models (Coursera/Udemy), CohortFlow is **infrastructure** (Shopify for Education). Educators own the brand, the data, and the student relationship.
 
-## The GenAI Value Proposition
-Generative AI is the core differentiator for CohortFlow. It solves two primary "founder" problems:
-1. **The Blank Page Problem**: Use the `Curriculum Generator` to turn a topic into a structured, pedagogical experience.
-2. **The Gating Problem**: Use the `Admissions Scorer` to automate the vetting of hundreds of applicants, ensuring only high-quality peers enter the network.
+## The "Pickaxe" Strategy
+We are selling the tools for experts to "productize" their genius. 
+- **White-Labeling**: The platform disappears; the educator's brand takes center stage.
+- **AI-Powered Scale**: AI handles the tasks that don't scale (admissions vetting, curriculum drafting, peer feedback summarization).
 
 ## Inspirations & Reference Models
-- **Maven**: The primary model for the cohort-based landing page and the "funnel" approach to student enrollment.
-- **Reforge / Section**: For the professional, deep-blue aesthetic and the focus on "high-signal" peer networking.
-- **Masterclass**: For the premium, "justifies the price" UI components and typography.
+- **Maven**: For the cohort-based landing page and funnel approach.
+- **Shopify**: For the "powering your business" backend philosophy.
+- **Reforge / Section**: For the professional, elite aesthetic.
 
 ## Key Modules
-- **Application System**: A public-facing form for potential students.
-- **Dashboard**: A split interface for Admin (metrics/approvals) and Students (deadlines/sessions).
-- **AI Peer Review Engine**: A summarizer that helps students digest feedback from multiple classmates.
-- **AI Admissions**: Automated scoring of applications to assist admin decision-making.
+- **Academy Command Center**: Where owners manage their faculty (lecturers), curriculum, and revenue.
+- **Application Funnel**: A gated intake process to maintain high-signal peer groups.
+- **AI Course Builder**: Transforming research (PDFs) into instructor-ready slides and modules.
+- **Alumni Network**: A persistent value-add that justifies high-ticket pricing ($2k - $10k+).
 
 ## Technical Constraints
-- Next.js 15 for performance and modern routing.
-- Genkit for structured AI output and agentic tools.
-- ShadCN for a modern, high-quality feel.
+- Next.js 15 (App Router).
+- Genkit for structured AI output.
+- ShadCN UI for premium aesthetic.
