@@ -1,7 +1,24 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { GraduationCap, Users, Sparkles, ShieldCheck, ArrowRight, Laptop, Zap, Globe, BarChart3, Rocket, Video, Mic, CheckCircle2, Calendar, Award, MessageSquare } from 'lucide-react';
+import { 
+  GraduationCap, 
+  Users, 
+  Sparkles, 
+  ShieldCheck, 
+  ArrowRight, 
+  Laptop, 
+  Zap, 
+  Globe, 
+  BarChart3, 
+  Rocket, 
+  Video, 
+  Mic, 
+  CheckCircle2, 
+  Calendar, 
+  Award, 
+  MessageSquare 
+} from 'lucide-react';
 
 export default function LandingPage() {
   return (
