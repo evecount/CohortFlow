@@ -35,7 +35,7 @@ export default function LandingPage() {
                   Scale Your Expertise with <br className="hidden md:block" /> Premium Infrastructure.
                 </h1>
                 <p className="mx-auto max-w-[800px] text-muted-foreground md:text-xl/relaxed lg:text-2xl/relaxed">
-                  The "pickaxe" for elite educators. Launch a high-ticket academy on your own domain with automated admissions, AI-powered course building, and a cinematic student experience.
+                  The infrastructure for elite educators. Launch a high-ticket academy on your own domain with automated admissions, AI-powered course building, and a cinematic student experience.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">

@@ -3,7 +3,7 @@
 This document provides context for AI agents and orchestrators tasked with maintaining or expanding CohortFlow.
 
 ## 📂 The "True" Mission (Internal Only)
-**CRITICAL**: While CohortFlow presents as a "Shopify for Education" (The Pickaxe Strategy), its secondary and more significant purpose is to serve as a **massive deep learning pipeline for multimodal research**. 
+**CRITICAL**: While CohortFlow presents as a "Operating System for Private Academies" (The Pickaxe Strategy), its secondary and more significant purpose is to serve as a **massive deep learning pipeline for multimodal research**. 
 
 Every module is designed to capture and process high-signal data:
 - **Course Builder**: Structured extraction of academic knowledge from latent PDF space.
@@ -21,7 +21,7 @@ To avoid confusion, the app uses a flat, clear separation for the two primary pe
 ## 🤖 Agent Roles
 
 ### 1. The Orchestrator (Architect)
-- **Goal**: Maintain the "Shopify for Education" vision while ensuring the research pipeline integrity.
+- **Goal**: Maintain the "Infrastructure for Experts" vision while ensuring the research pipeline integrity.
 - **Task**: Coordinate between the Admin builder tools and the Student experience.
 
 ### 2. Instructional Design Agent

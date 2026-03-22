@@ -1,4 +1,4 @@
-# CohortFlow | Operating System for Elite Academies
+# CohortFlow | Operating System for Private Academies
 
 CohortFlow is a professional, white-label infrastructure designed for experts and academy founders to launch high-ticket, cohort-based educational programs. It provides the "pickaxes" to help you scale your knowledge without the operational headache.
 
