@@ -25,24 +25,23 @@ CohortFlow is a professional, white-label management system designed specificall
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/) & [ShadCN UI](https://ui.shadcn.com/)
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **AI/GenAI**: [Genkit](https://github.com/firebase/genkit) with Google Gemini
-- **Database/Auth**: [Firebase](https://firebase.google.com/) (Configurable)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Database/Auth**: [Firebase](https://firebase.google.com/)
+
+## 🤖 Agentic Readiness
+This project is designed to be maintained by AI agents. For specific instructions on orchestration and agent roles, see:
+- [Agent Instructions & Orchestration](docs/agent-instructions.md)
+- [Project Vision & Original Prompt](docs/project-overview.md)
 
 ## 🏁 Getting Started
 
-1. **Clone the repository**
-2. **Install dependencies**:
+1. **Install dependencies**:
    ```bash
    npm install
    ```
-3. **Configure Environment**: Create a `.env` file with your Google API Key for Genkit.
-4. **Run the development server**:
+2. **Configure Environment**: Create a `.env` file with your Google API Key for Genkit.
+3. **Run the development server**:
    ```bash
    npm run dev
-   ```
-5. **Start Genkit UI** (Optional):
-   ```bash
-   npm run genkit:dev
    ```
 
 ## 📂 Project Structure
@@ -51,4 +50,4 @@ CohortFlow is a professional, white-label management system designed specificall
 - `src/ai`: Genkit flows and AI logic.
 - `src/components`: Reusable UI components (ShadCN).
 - `src/lib`: Mock data and utility functions.
-- `docs`: Project documentation and architecture details.
+- `docs`: Project documentation, vision archives, and agent instructions.
