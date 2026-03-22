@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { GraduationCap, Users, Sparkles, ShieldCheck, ArrowRight, Laptop, Zap, Globe, BarChart3, Rocket, Video, Mic, CheckCircle2 } from 'lucide-react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { GraduationCap, Users, Sparkles, ShieldCheck, ArrowRight, Laptop, Zap, Globe, BarChart3, Rocket, Video, Mic, CheckCircle2, Calendar, Award, MessageSquare } from 'lucide-react';
 
 export default function LandingPage() {
   return (
@@ -15,6 +14,7 @@ export default function LandingPage() {
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6 items-center">
           <Link className="text-sm font-medium hover:text-accent transition-colors" href="#features">Infrastructure</Link>
+          <Link className="text-sm font-medium hover:text-accent transition-colors" href="#student-experience">Student Portal</Link>
           <Link className="text-sm font-medium hover:text-accent transition-colors" href="#rehearsal">Rehearsal Lab</Link>
           <Link href="/admin/dashboard" className="text-sm font-bold text-primary px-4 py-2 border border-primary rounded-full hover:bg-primary hover:text-white transition-all">
             Instructor Portal
@@ -29,21 +29,21 @@ export default function LandingPage() {
             <div className="flex flex-col items-center space-y-6 text-center">
               <div className="space-y-4">
                 <div className="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-primary/10 text-primary mb-4 border border-primary/20">
-                  <Rocket className="mr-2 h-4 w-4" /> White-Label Infrastructure for Global Experts
+                  <Rocket className="mr-2 h-4 w-4" /> The Operating System for Private Academies
                 </div>
                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline text-primary max-w-5xl mx-auto leading-tight">
-                  The Operating System for <br className="hidden md:block" /> Private Learning Academies.
+                  Scale Your Expertise with <br className="hidden md:block" /> Premium Infrastructure.
                 </h1>
                 <p className="mx-auto max-w-[800px] text-muted-foreground md:text-xl/relaxed lg:text-2xl/relaxed">
-                  The "pickaxe" for elite educators. Scale your expertise with a premium, white-label platform designed for high-ticket cohorts, automated admissions, and AI-powered production.
+                  The "pickaxe" for elite educators. Launch a high-ticket academy on your own domain with automated admissions, AI-powered course building, and a cinematic student experience.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button asChild size="lg" className="h-14 px-8 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
-                  <Link href="/admin/builder">Start Your Academy <ArrowRight className="ml-2 h-5 w-5" /></Link>
+                  <Link href="/admin/builder">Build Your Academy <ArrowRight className="ml-2 h-5 w-5" /></Link>
                 </Button>
-                <Button variant="outline" size="lg" asChild className="h-14 px-8 text-lg rounded-full">
-                  <Link href="/dashboard">Student Experience Demo</Link>
+                <Button variant="outline" size="lg" asChild className="h-14 px-8 text-lg rounded-full border-primary text-primary hover:bg-primary/5">
+                  <Link href="/dashboard">View Student Demo</Link>
                 </Button>
               </div>
             </div>
@@ -55,38 +55,93 @@ export default function LandingPage() {
         <section id="features" className="w-full py-24 lg:py-32 bg-white border-y">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="text-center mb-20 space-y-4">
-              <h2 className="text-3xl font-bold font-headline text-primary sm:text-4xl uppercase tracking-tight">Enterprise Infrastructure</h2>
+              <h2 className="text-3xl font-bold font-headline text-primary sm:text-4xl uppercase tracking-tight">White-Label Enterprise Core</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-                Own your audience, your data, and your brand. CohortFlow is the invisible engine behind the world's most prestigious learning communities.
+                Stop building on marketplaces you don't own. CohortFlow provides the invisible engine behind the world's most prestigious learning communities.
               </p>
             </div>
             <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
               <div className="space-y-4 p-8 rounded-2xl border bg-slate-50/50 hover:bg-white hover:shadow-xl transition-all border-slate-100 group">
                 <Globe className="h-12 w-12 text-accent group-hover:scale-110 transition-transform" />
-                <h3 className="text-xl font-bold text-primary">Custom White-Labeling</h3>
+                <h3 className="text-xl font-bold text-primary">Branded Autonomy</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Total brand autonomy. Host on your own domain with full visual control. Your students never see "CohortFlow"—only your expertise.
+                  Total brand control. Host on your domain with custom themes. Your students see your brand, your expertise, and your values—never ours.
                 </p>
               </div>
               <div className="space-y-4 p-8 rounded-2xl border bg-slate-50/50 hover:bg-white hover:shadow-xl transition-all border-slate-100 group">
                 <BarChart3 className="h-12 w-12 text-accent group-hover:scale-110 transition-transform" />
-                <h3 className="text-xl font-bold text-primary">Faculty & Roster Control</h3>
+                <h3 className="text-xl font-bold text-primary">Faculty Orchestration</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Manage lead instructors, guest experts, and TAs across multiple cohorts with granular permissions and automated scheduling.
                 </p>
               </div>
               <div className="space-y-4 p-8 rounded-2xl border bg-slate-50/50 hover:bg-white hover:shadow-xl transition-all border-slate-100 group">
                 <ShieldCheck className="h-12 w-12 text-accent group-hover:scale-110 transition-transform" />
-                <h3 className="text-xl font-bold text-primary">Automated Admissions</h3>
+                <h3 className="text-xl font-bold text-primary">AI-Gated Admissions</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Vet students at scale. Our AI-assisted admissions engine scores applicants on professional fit, ensuring elite cohort quality.
+                  Vet students at scale. Our AI-assisted admissions engine scores applicants on professional signal, ensuring elite peer groups.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* AI Rehearsal Lab Section (New Preview) */}
+        {/* Student Experience Section */}
+        <section id="student-experience" className="w-full py-24 bg-slate-50">
+          <div className="container px-4 md:px-6 mx-auto">
+            <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
+              <div className="lg:w-1/2 space-y-8">
+                <div className="inline-flex items-center rounded-lg bg-primary/10 px-3 py-1 text-sm font-bold text-primary">
+                  <GraduationCap className="mr-2 h-4 w-4" /> THE STUDENT HOME BASE
+                </div>
+                <h2 className="text-4xl font-bold font-headline text-primary sm:text-5xl">A Premium Learning Environment.</h2>
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  Your students deserve better than a messy folder of links. Give them a professional dashboard where they can manage their schedule, collaborate with peers, and receive AI-summarized feedback.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="flex items-center gap-3">
+                    <Calendar className="h-5 w-5 text-accent" />
+                    <span className="text-sm font-medium">Localized Schedules</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Award className="h-5 w-5 text-accent" />
+                    <span className="text-sm font-medium">AI Peer Review Engine</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Users className="h-5 w-5 text-accent" />
+                    <span className="text-sm font-medium">Elite Alumni Networking</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <MessageSquare className="h-5 w-5 text-accent" />
+                    <span className="text-sm font-medium">High-Signal Discussions</span>
+                  </div>
+                </div>
+                <Button asChild variant="outline" size="lg" className="rounded-full">
+                  <Link href="/dashboard">Explore Student Demo <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                </Button>
+              </div>
+              <div className="lg:w-1/2">
+                <div className="relative">
+                  <img 
+                    src="https://picsum.photos/seed/student-demo/800/600" 
+                    alt="Student Dashboard Preview" 
+                    className="rounded-3xl shadow-2xl border-8 border-white"
+                    data-ai-hint="dashboard UI"
+                  />
+                  <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl max-w-xs border animate-in slide-in-from-bottom-4 duration-1000">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Sparkles className="h-4 w-4 text-accent" />
+                      <span className="text-xs font-bold uppercase tracking-widest text-primary">AI Insight</span>
+                    </div>
+                    <p className="text-xs text-slate-600 italic">"Based on 4 peer reviews, your primary strength is your data methodology implementation."</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* AI Rehearsal Lab Section */}
         <section id="rehearsal" className="w-full py-24 bg-primary text-white overflow-hidden relative">
           <div className="container px-4 md:px-6 mx-auto relative z-10">
             <div className="flex flex-col lg:flex-row items-center gap-16">
@@ -114,7 +169,7 @@ export default function LandingPage() {
                   ))}
                 </div>
                 <Button size="lg" variant="secondary" asChild className="rounded-full h-12 px-8 mt-4 font-bold">
-                  <Link href="/admin/rehearsal">Preview the Rehearsal Lab</Link>
+                  <Link href="/admin/rehearsal">Try Rehearsal Lab</Link>
                 </Button>
               </div>
               <div className="lg:w-1/2 relative">
@@ -153,9 +208,9 @@ export default function LandingPage() {
                 <div className="inline-flex items-center rounded-lg bg-accent/10 px-3 py-1 text-sm font-bold text-accent">
                   <Zap className="mr-2 h-4 w-4" /> PRODUCTION SUITE
                 </div>
-                <h2 className="text-4xl font-bold font-headline text-primary sm:text-5xl">Accelerate Academy Design</h2>
+                <h2 className="text-4xl font-bold font-headline text-primary sm:text-5xl">Accelerate Course Design</h2>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  Turn your research papers, notes, or industry docs into instructor-ready curriculum and premium media in minutes.
+                  Turn your research papers, whitepapers, or technical notes into instructor-ready curriculum and premium media in minutes.
                 </p>
                 <div className="grid gap-6">
                   <div className="flex items-start gap-4">
@@ -178,7 +233,7 @@ export default function LandingPage() {
                   </div>
                 </div>
                 <Button size="lg" asChild className="rounded-full h-12 px-10">
-                  <Link href="/admin/builder">Explore the Builder</Link>
+                  <Link href="/admin/builder">Explore Course Builder</Link>
                 </Button>
               </div>
               <div className="lg:w-1/2">
@@ -194,7 +249,7 @@ export default function LandingPage() {
                     <p className="text-white/40">{" >> "} Extracting key findings...</p>
                     <p className="text-white/40">{" >> "} Mapping learning objectives...</p>
                     <p className="text-accent">$ generate --output="curriculum_outline"</p>
-                    <p className="text-green-400 font-bold">✓ 12-Week High-Ticket Program Ready.</p>
+                    <p className="text-green-400 font-bold">✓ 12-Week Program Architected.</p>
                     <div className="pt-4 border-t border-white/10 mt-4">
                       <p className="text-accent">$ render --media="lecture_voiceover"</p>
                       <p className="text-white/40">{" >> "} Synthesizing professional audio for Module 1...</p>
@@ -210,16 +265,16 @@ export default function LandingPage() {
         <section className="w-full py-24 bg-primary text-primary-foreground relative overflow-hidden">
           <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-accent/20 rounded-full blur-3xl" />
           <div className="container px-4 md:px-6 mx-auto text-center space-y-10 relative z-10">
-            <h2 className="text-4xl font-bold tracking-tight sm:text-5xl max-w-3xl mx-auto">The infrastructure for your expertise.</h2>
+            <h2 className="text-4xl font-bold tracking-tight sm:text-5xl max-w-3xl mx-auto">Your knowledge, our infrastructure.</h2>
             <p className="mx-auto max-w-[700px] text-primary-foreground/80 text-xl">
-              Don't build on a marketplace. Build on your own terms. CohortFlow is the white-label operating system for the world's most elite educators.
+              Don't build on a platform you don't control. CohortFlow is the white-label operating system for the world's most elite educators.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary" className="rounded-full px-12 h-14 text-lg font-bold">
-                <Link href="/admin/builder">Get Started</Link>
+                <Link href="/admin/builder">Launch Your Academy</Link>
               </Button>
               <Button variant="outline" size="lg" className="rounded-full px-12 h-14 text-lg bg-transparent border-white text-white hover:bg-white hover:text-primary">
-                Book a Platform Tour
+                Book a Demo
               </Button>
             </div>
           </div>
@@ -232,11 +287,11 @@ export default function LandingPage() {
             <GraduationCap className="h-6 w-6 text-primary" />
             <span className="text-lg font-bold text-primary">CohortFlow</span>
           </div>
-          <p className="text-sm text-muted-foreground">© 2025 CohortFlow Inc. The premium infrastructure for elite educators.</p>
+          <p className="text-sm text-muted-foreground">© 2025 CohortFlow Inc. Professional infrastructure for elite educators.</p>
           <nav className="flex gap-6">
-            <Link className="text-xs hover:text-primary transition-colors" href="#">Terms of Service</Link>
-            <Link className="text-xs hover:text-primary transition-colors" href="#">Privacy Policy</Link>
-            <Link className="text-xs hover:text-primary transition-colors" href="#">Contact Sales</Link>
+            <Link className="text-xs hover:text-primary transition-colors" href="#">Terms</Link>
+            <Link className="text-xs hover:text-primary transition-colors" href="#">Privacy</Link>
+            <Link className="text-xs hover:text-primary transition-colors" href="#">Contact</Link>
           </nav>
         </div>
       </footer>
