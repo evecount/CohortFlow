@@ -1,4 +1,3 @@
-
 "use client"
 
 import Link from 'next/link';
@@ -14,7 +13,8 @@ import {
   LogOut,
   GraduationCap,
   ClipboardList,
-  BookOpen
+  BookOpen,
+  Wand2
 } from 'lucide-react';
 
 interface SidebarItem {
@@ -33,6 +33,7 @@ export function DashboardSidebar({ type }: DashboardSidebarProps) {
   const adminItems: SidebarItem[] = [
     { icon: LayoutDashboard, label: 'Overview', href: '/admin/dashboard' },
     { icon: ClipboardList, label: 'Applications', href: '/admin/applications' },
+    { icon: Wand2, label: 'Course Builder', href: '/admin/builder' },
     { icon: Users, label: 'Cohorts', href: '/admin/cohorts' },
     { icon: Settings, label: 'Settings', href: '/admin/settings' },
   ];

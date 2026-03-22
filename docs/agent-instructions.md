@@ -14,9 +14,12 @@ This document provides context and instructions for AI agents and orchestrators 
 - **Tooling**: Use the `scoreApplication` flow to provide a baseline "Fit Score" for every incoming student.
 - **Goal**: Filter for high-signal candidates who justify the premium price point.
 
-### 3. Instructional Designer
+### 3. Instructional Designer & Academic Transcriber
 - **Responsibility**: Expanding the curriculum and session descriptions.
-- **Tooling**: Use the `generateCurriculum` tool to suggest themes, reading lists, and assignments based on the cohort's core topic.
+- **Tooling**: 
+  - Use `generateCurriculum` to suggest themes.
+  - Use `generateClassFromPdf` to ingest complex research papers (e.g., from arXiv) and synthesize them into practitioner-ready modules.
+- **Goal**: Reduce the friction for experts to "productize" their knowledge.
 
 ### 4. Frontend Specialist (ShadCN/Tailwind)
 - **Responsibility**: UI/UX implementation using Next.js 15 and Tailwind.
