@@ -14,7 +14,8 @@ import {
   GraduationCap,
   ClipboardList,
   BookOpen,
-  Wand2
+  Wand2,
+  Laptop
 } from 'lucide-react';
 
 interface SidebarItem {
@@ -34,6 +35,7 @@ export function DashboardSidebar({ type }: DashboardSidebarProps) {
     { icon: LayoutDashboard, label: 'Overview', href: '/admin/dashboard' },
     { icon: ClipboardList, label: 'Applications', href: '/admin/applications' },
     { icon: Wand2, label: 'Course Builder', href: '/admin/builder' },
+    { icon: Laptop, label: 'Rehearsal Lab', href: '/admin/rehearsal' },
     { icon: Users, label: 'Cohorts', href: '/admin/cohorts' },
     { icon: Settings, label: 'Settings', href: '/admin/settings' },
   ];

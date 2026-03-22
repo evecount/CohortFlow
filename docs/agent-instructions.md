@@ -18,7 +18,7 @@ To avoid confusion, the app uses a flat, clear separation for the two primary pe
 - **Instruction**: Ensure any new feature for instructors (Admin) has a corresponding "View" or "Action" for students (Dashboard).
 
 ### 2. Instructional Design Agent
-- **Tooling**: `generateCurriculum`, `generateClassFromPdf`.
+- **Tooling**: `generateCurriculum`, `generateClassFromPdf`, `coachLecturer`.
 - **Responsibility**: Improving the quality of generated educational content.
 - **Logic**: Always prefer "Academic-to-Practitioner" translation. Turn raw data into actionable slides and exercises.
 
@@ -26,7 +26,12 @@ To avoid confusion, the app uses a flat, clear separation for the two primary pe
 - **Tooling**: `scoreApplication`.
 - **Responsibility**: Maintaining the "Elite" status of cohorts by filtering for high-signal candidates.
 
-### 4. UI/UX Specialist
+### 4. Presentation Coach Agent (Multimodal)
+- **Tooling**: `coachLecturer`.
+- **Responsibility**: Helping instructors refine their delivery using Multimodal Live capabilities.
+- **Goal**: Analyze speech cadence, body language (via frame snapshots), and content alignment.
+
+### 5. UI/UX Specialist
 - **Palette**: Deep Blue (Primary: `210 60% 40%`) and Intelligent Purple (Accent: `240 70% 65%`).
 - **Standard**: Strictly use ShadCN and Tailwind. Maintain "Masterclass" levels of professional polish.
 

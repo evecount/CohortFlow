@@ -8,3 +8,4 @@ import '@/ai/flows/generate-curriculum-flow.ts';
 import '@/ai/flows/generate-class-from-pdf-flow.ts';
 import '@/ai/flows/generate-lecture-audio-flow.ts';
 import '@/ai/flows/generate-teaser-video-flow.ts';
+import '@/ai/flows/multimodal-coach-flow.ts';
