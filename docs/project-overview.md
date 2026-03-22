@@ -3,7 +3,7 @@
 This document captures the original vision and requirements used to initialize the CohortFlow project.
 
 ## Core Vision
-To build a "white-label" LMS platform tailored for high-ticket, time-bound educational accelerators. Unlike generic LMS platforms (Moodle/Canvas), CohortFlow focuses on community, peer-to-peer learning, and high-touch administrative control.
+To build a "white-label" LMS platform tailored for high-ticket, time-bound educational accelerators. Unlike generic LMS platforms (Moodle/Canvas), CohortFlow focuses on community, peer-to-peer learning, and high-touch administrative control for **creators and educators**.
 
 ## The GenAI Value Proposition
 Generative AI is the core differentiator for CohortFlow. It solves two primary "founder" problems:
