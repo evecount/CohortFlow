@@ -1,0 +1,29 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Professional education setting with diverse students collaborating",
+      "imageUrl": "https://picsum.photos/seed/cohort-hero/1200/600",
+      "imageHint": "education teamwork"
+    },
+    {
+      "id": "student-profile-1",
+      "description": "Professional headshot of a student",
+      "imageUrl": "https://picsum.photos/seed/student1/200/200",
+      "imageHint": "portrait business"
+    },
+    {
+      "id": "student-profile-2",
+      "description": "Professional headshot of another student",
+      "imageUrl": "https://picsum.photos/seed/student2/200/200",
+      "imageHint": "portrait person"
+    },
+    {
+      "id": "academy-logo",
+      "description": "Abstract professional academy logo",
+      "imageUrl": "https://picsum.photos/seed/logo/100/100",
+      "imageHint": "abstract logo"
+    }
+  ]
+}
