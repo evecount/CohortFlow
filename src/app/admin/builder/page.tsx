@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { FileText, Wand2, Loader2, Sparkles, Download, BookOpen, Presentation } from 'lucide-react';
+import { FileText, Wand2, Loader2, Sparkles, Download, BookOpen, Presentation, Quote } from 'lucide-react';
 import { generateClassFromPdf, GenerateClassFromPdfOutput } from '@/ai/flows/generate-class-from-pdf-flow';
 
 export default function CourseBuilderLab() {
@@ -57,13 +57,13 @@ export default function CourseBuilderLab() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Upload Column */}
         <div className="space-y-6">
-          <Card className="border-accent/20 bg-accent/5">
+          <Card className="border-accent/20 bg-accent/5 shadow-sm">
             <CardHeader>
               <CardTitle className="text-lg">Upload Source Paper</CardTitle>
               <CardDescription>Upload an arXiv PDF or research paper to begin.</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="flex flex-col items-center justify-center border-2 border-dashed rounded-xl p-8 bg-white/50 gap-4">
+              <div className="flex flex-col items-center justify-center border-2 border-dashed rounded-xl p-8 bg-white/50 gap-4 transition-all hover:border-accent/40">
                 <FileText className="h-12 w-12 text-muted-foreground" />
                 <div className="text-center">
                   <p className="text-sm font-medium">Click to upload or drag & drop</p>
@@ -77,20 +77,20 @@ export default function CourseBuilderLab() {
                   onChange={handleFileUpload}
                   disabled={loading}
                 />
-                <Button asChild disabled={loading}>
+                <Button asChild disabled={loading} className="rounded-full">
                   <label htmlFor="pdf-upload" className="cursor-pointer">
                     {loading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <FileText className="mr-2 h-4 w-4" />}
                     Select Research Paper
                   </label>
                 </Button>
               </div>
-              {error && <p className="mt-4 text-xs text-red-500 font-medium">{error}</p>}
+              {error && <p className="mt-4 text-xs text-red-500 font-medium text-center">{error}</p>}
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-sm">Why use this?</CardTitle>
+              <CardTitle className="text-sm">Academic Transcription</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="flex gap-3">
@@ -103,7 +103,13 @@ export default function CourseBuilderLab() {
                 <div className="h-5 w-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
                   <BookOpen className="h-3 w-3 text-blue-600" />
                 </div>
-                <p className="text-xs text-muted-foreground">Translate academic jargon into "CEO-speak".</p>
+                <p className="text-xs text-muted-foreground">Translate academic jargon into "Practitioner-speak".</p>
+              </div>
+              <div className="flex gap-3">
+                <div className="h-5 w-5 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
+                  <Quote className="h-3 w-3 text-purple-600" />
+                </div>
+                <p className="text-xs text-muted-foreground">Properly cited references for expert credibility.</p>
               </div>
             </CardContent>
           </Card>
@@ -112,58 +118,82 @@ export default function CourseBuilderLab() {
         {/* Results Column */}
         <div className="lg:col-span-2">
           {!result ? (
-            <div className="h-[400px] border rounded-xl border-dashed flex flex-col items-center justify-center bg-slate-50 text-muted-foreground space-y-2">
-              <Presentation className="h-12 w-12 opacity-20" />
-              <p className="text-sm">Your course architecture will appear here.</p>
+            <div className="h-[500px] border rounded-xl border-dashed flex flex-col items-center justify-center bg-slate-50 text-muted-foreground space-y-4 text-center px-6">
+              <Presentation className="h-16 w-16 opacity-10" />
+              <div>
+                <p className="text-lg font-medium">Your course architecture will appear here.</p>
+                <p className="text-sm">The AI will extract modules, slide outlines, and citations from your paper.</p>
+              </div>
             </div>
           ) : (
             <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
-              <Card className="border-primary/20 shadow-lg">
-                <CardHeader className="bg-primary/5 rounded-t-xl">
+              <Card className="border-primary/20 shadow-xl overflow-hidden">
+                <CardHeader className="bg-primary text-white p-8">
                   <div className="flex justify-between items-start">
-                    <div>
-                      <Badge variant="outline" className="mb-2 bg-white">AI Generated Program</Badge>
-                      <CardTitle className="text-2xl text-primary">{result.courseTitle}</CardTitle>
+                    <div className="space-y-2">
+                      <Badge variant="secondary" className="bg-white/20 text-white border-none">AI Academic Transcript</Badge>
+                      <CardTitle className="text-3xl font-headline leading-tight">{result.courseTitle}</CardTitle>
                     </div>
-                    <Button variant="ghost" size="icon" title="Export Curriculum">
+                    <Button variant="outline" size="icon" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
                       <Download className="h-5 w-5" />
                     </Button>
                   </div>
                 </CardHeader>
-                <CardContent className="pt-6 space-y-6">
-                  <div className="space-y-2">
-                    <h4 className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Executive Summary</h4>
-                    <p className="text-sm leading-relaxed">{result.executiveSummary}</p>
+                <CardContent className="p-8 space-y-8">
+                  <div className="space-y-3">
+                    <h4 className="text-xs font-bold uppercase tracking-widest text-accent flex items-center gap-2">
+                      <Sparkles className="h-3 w-3" /> Executive Summary
+                    </h4>
+                    <p className="text-base text-slate-700 leading-relaxed italic border-l-4 border-accent pl-6 bg-slate-50 py-4 rounded-r-lg">
+                      "{result.executiveSummary}"
+                    </p>
                   </div>
 
-                  <div className="space-y-2">
-                    <h4 className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Course Modules</h4>
+                  <div className="space-y-4">
+                    <h4 className="text-xs font-bold uppercase tracking-widest text-primary">Curriculum Breakdown</h4>
                     <Accordion type="single" collapsible className="w-full">
                       {result.modules.map((module, i) => (
-                        <AccordionItem key={i} value={`item-${i}`}>
-                          <AccordionTrigger className="hover:no-underline py-4">
-                            <span className="text-left font-bold text-primary">Module {i + 1}: {module.title}</span>
+                        <AccordionItem key={i} value={`item-${i}`} className="border-slate-100">
+                          <AccordionTrigger className="hover:no-underline py-5 group">
+                            <span className="text-left font-bold text-primary group-hover:text-accent transition-colors">
+                              Module {i + 1}: {module.title}
+                            </span>
                           </AccordionTrigger>
-                          <AccordionContent className="space-y-4 pt-2">
-                            <div className="space-y-2">
-                              <h5 className="text-xs font-semibold text-accent">Learning Takeaways</h5>
-                              <ul className="list-disc pl-4 text-sm space-y-1">
-                                {module.keyTakeaways.map((k, j) => <li key={j}>{k}</li>)}
-                              </ul>
+                          <AccordionContent className="space-y-6 pt-2 pb-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                              <div className="space-y-3">
+                                <h5 className="text-xs font-semibold text-slate-500 uppercase tracking-tighter">Practitioner Outcomes</h5>
+                                <ul className="space-y-2">
+                                  {module.keyTakeaways.map((k, j) => (
+                                    <li key={j} className="text-sm flex gap-2">
+                                      <span className="text-accent font-bold">•</span> {k}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                              <div className="p-4 bg-slate-50 rounded-xl border border-dashed border-slate-200">
+                                <h5 className="text-xs font-semibold mb-2 flex items-center gap-1">
+                                  <BookOpen className="h-3 w-3" /> Applied Exercise
+                                </h5>
+                                <p className="text-xs text-muted-foreground leading-relaxed">{module.applicationExercise}</p>
+                              </div>
                             </div>
-                            <div className="p-3 bg-slate-50 rounded-lg border border-dashed">
-                              <h5 className="text-xs font-semibold mb-1">Practical Application Exercise</h5>
-                              <p className="text-xs text-muted-foreground">{module.applicationExercise}</p>
-                            </div>
-                            <div className="space-y-2">
-                              <h5 className="text-xs font-semibold text-primary">Presentation Slide Outline</h5>
-                              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            
+                            <div className="space-y-3">
+                              <h5 className="text-xs font-semibold text-slate-500 uppercase tracking-tighter">Instructor Slide Decks</h5>
+                              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                 {module.slidesOutline.map((slide, j) => (
-                                  <div key={j} className="p-3 bg-white border rounded text-xs">
-                                    <p className="font-bold border-b pb-1 mb-1">{slide.heading}</p>
-                                    <ul className="list-disc pl-3 text-[10px] space-y-1">
+                                  <div key={j} className="p-4 bg-white border border-slate-100 rounded-xl shadow-sm space-y-2">
+                                    <div className="flex items-center gap-2 text-primary">
+                                      <Presentation className="h-3 w-3" />
+                                      <p className="font-bold text-xs truncate">{slide.heading}</p>
+                                    </div>
+                                    <ul className="list-disc pl-4 text-[11px] text-slate-600 space-y-1">
                                       {slide.bulletPoints.map((bp, k) => <li key={k}>{bp}</li>)}
                                     </ul>
+                                    <div className="pt-2 mt-2 border-t text-[9px] text-slate-400 italic">
+                                      Visual: {slide.visualDescription}
+                                    </div>
                                   </div>
                                 ))}
                               </div>
@@ -174,13 +204,19 @@ export default function CourseBuilderLab() {
                     </Accordion>
                   </div>
 
-                  <div className="pt-4 border-t italic text-[10px] text-muted-foreground">
-                    Source: {result.citation}
+                  <div className="pt-6 border-t flex items-start gap-3">
+                    <Quote className="h-5 w-5 text-slate-300 flex-shrink-0" />
+                    <div className="space-y-1">
+                      <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Source Reference</p>
+                      <p className="text-xs text-slate-600 font-medium italic">{result.citation}</p>
+                    </div>
                   </div>
                 </CardContent>
-                <CardFooter className="bg-slate-50 border-t rounded-b-xl py-4 flex justify-between">
-                  <p className="text-xs text-muted-foreground">Generated via CohortFlow AI Orchestrator</p>
-                  <Button size="sm">Create Cohort from this Program</Button>
+                <CardFooter className="bg-slate-50 border-t py-6 flex justify-between items-center">
+                  <p className="text-xs text-muted-foreground">Course content synthesized via CohortFlow Intelligence</p>
+                  <Button className="rounded-full px-6">
+                    Launch New Cohort <Wand2 className="ml-2 h-4 w-4" />
+                  </Button>
                 </CardFooter>
               </Card>
             </div>

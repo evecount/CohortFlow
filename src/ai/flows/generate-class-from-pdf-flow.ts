@@ -62,7 +62,7 @@ Your task is to take the provided research paper (PDF) and transform its core in
 2. Translate academic jargon into professional, outcome-oriented language.
 3. Create a structured curriculum where each module leads to a practical business or technical outcome.
 4. For each module, provide a set of slide outlines that an instructor could use to teach the material.
-5. Ensure the "Citation" field correctly identifies the authors and arXiv ID if present.
+5. Ensure the "Citation" field correctly identifies the authors, year, and arXiv ID or DOI if present.
 
 Focus on practical utility. Why does this research matter to the audience? How can they use it tomorrow?`,
 });
