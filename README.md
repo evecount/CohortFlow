@@ -28,3 +28,6 @@ We are building more than an LMS; CohortFlow is a **massive deep learning pipeli
 This project is built for AI agents. For detailed instructions on agent roles and the research pipeline goals, see:
 - [Agent Instructions & Orchestration](docs/agent-instructions.md)
 - [Project Vision & Philosophy](docs/project-overview.md)
+
+---
+*"We are selling the pickaxes, not digging for the gold."* - Core Philosophy
