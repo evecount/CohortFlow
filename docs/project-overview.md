@@ -3,7 +3,7 @@
 This document captures the original vision and requirements used to initialize the CohortFlow project.
 
 ## 💎 Core Philosophy: "The Pickaxe Strategy"
-CohortFlow is designed as the **"Shopify for Education."** 
+CohortFlow is designed as the **"Operating System for Private Academies."** 
 
 We provide the infrastructure (the "pickaxes") to elite educators so they can focus on digging for "gold" (knowledge and revenue). We don't want to be the marketplace; we want to be the engine that powers the marketplace creators.
 
@@ -25,6 +25,9 @@ Beyond the SaaS surface, CohortFlow is a **massive deep learning pipeline for mu
 
 ## Key Modules
 - **Course Builder Lab**: "Academic-to-Practitioner" engine.
-- **AI Rehearsal Lab**: Multimodal live coaching interface.
+- **AI Rehearsal Lab**: Multimodal live coaching interface for instructors.
 - **Application Funnel**: AI-gated entry for elite cohorts.
 - **Student Home Base**: Personalized learning and peer networking.
+
+## 🤖 The Original Prompt Essence
+The goal was to build a system where an expert could upload a technical paper and, within minutes, have a branded dashboard ready to accept students, with a full curriculum, teaser videos, and an AI coach ready to help them teach the material.
