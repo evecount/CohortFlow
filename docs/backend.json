@@ -1,0 +1,81 @@
+
+{
+  "entities": {
+    "AcademyProfile": {
+      "title": "Academy Profile",
+      "description": "Branding and configuration for a private academy.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "primaryColor": { "type": "string" },
+        "accentColor": { "type": "string" },
+        "logoUrl": { "type": "string" },
+        "domain": { "type": "string" }
+      },
+      "required": ["name"]
+    },
+    "Cohort": {
+      "title": "Cohort",
+      "description": "A specific instance of an educational program.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "theme": { "type": "string" },
+        "startDate": { "type": "string", "format": "date-time" },
+        "endDate": { "type": "string", "format": "date-time" },
+        "instructorId": { "type": "string" }
+      },
+      "required": ["name", "theme", "startDate", "endDate"]
+    },
+    "Application": {
+      "title": "Student Application",
+      "description": "A student's application to join a cohort.",
+      "type": "object",
+      "properties": {
+        "studentName": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "motivation": { "type": "string" },
+        "achievement": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "approved", "rejected", "waitlist"] },
+        "fitScore": { "type": "number" },
+        "reasoning": { "type": "string" },
+        "appliedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["studentName", "email", "status"]
+    },
+    "Session": {
+      "title": "Session",
+      "description": "A live workshop or assignment deadline within a cohort.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "type": { "type": "string", "enum": ["live", "deadline"] },
+        "startTime": { "type": "string", "format": "date-time" },
+        "link": { "type": "string" }
+      },
+      "required": ["title", "type", "startTime"]
+    }
+  },
+  "auth": {
+    "providers": ["google.com", "password"]
+  },
+  "firestore": {
+    "/academies/{academyId}": {
+      "schema": "AcademyProfile",
+      "description": "Primary settings for an academy."
+    },
+    "/academies/{academyId}/cohorts/{cohortId}": {
+      "schema": "Cohort",
+      "description": "Collection of active and past cohorts."
+    },
+    "/academies/{academyId}/applications/{applicationId}": {
+      "schema": "Application",
+      "description": "Student applications for the academy."
+    },
+    "/academies/{academyId}/cohorts/{cohortId}/sessions/{sessionId}": {
+      "schema": "Session",
+      "description": "The schedule and curriculum delivery for a cohort."
+    }
+  }
+}
